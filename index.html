@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>IST411 Partner Lab 3: The Skateboard Share</title>
+    </head>
+    <body>
+        <h1>Welcome to the Skateboard sharing app of IST 411</h1>
+        <div>
+            <img src="https://www.bamargera.com/wp-content/uploads/2018/11/How-to-Choose-Best-Skateboard-for-Kids-The-Definitive-Guide-2018-Update-1280x720.jpg" alt="Skateboard-kid" style="width: 50vw; margin-bottom: 1cm;">
+            <div id = "signin">
+                User Sign-Up
+                <input type="text" placeholder="Type your name" id = "user_signin">
+                <button onclick="signIn();">Add user</button>
+                <button onclick="checkReserv();">Check reservation</button>
+            </div>
+            <div id="reserve">
+                Reservation
+                <select id ="type_reserve">
+                    <option value="create">Create</option>
+                    <option value="update">Update</option>
+                    <option value="delete">Delete</option>
+                  </select>
+                  
+                <input type="text" placeholder="Type your name" id = "user_reserve">
+                <input type="date" id="date_reserve" name="date">
+                <input type="time" id="time_reserve" name="time" min="09:00" max="19:00">
+                <input type="text" placeholder="How many hours?" id = "hour_reserve">
+                <button onclick="reserv_request();">Send</button>
+            </div>
+            <div id="info">
+                Get INFO
+                <button onclick="apiList();">API List</button>
+                <button onclick="reservList();">Reservation List</button>
+            </div>    
+            <div id= "info-box"></div>
+                
+            </div>
+        </div>
+        
+        <div id="log_display"></div>
+        <script src="client.js" defer></script>
+    </body>
+</html>
