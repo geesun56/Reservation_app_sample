@@ -15,7 +15,6 @@ function signIn(){
         server_res = this.response;
         
         if (request.status == 200) {
-            
             console.log(server_res);
             alert("New user successfully added.");
         }
@@ -109,20 +108,21 @@ function reservList(){
         server_res = this.response;
         const reserv_object = JSON.parse(server_res)
         let reserv_sort = Object.keys(reserv_object)
-        reserv_sort.sort(function (usr1, usr2) {
-            usr1.toLowerCase();
-            usr2.toLowerCase();
-            if (usr1 > usr2) {
-                return -1;
-            }
-            if (usr2 > usr1) {
-                return 1;
-            }
-            return 0;
-        });
 
-        if (request.status == 200) {
+        if (reserv_sort.length > 0) {
 
+            reserv_sort.sort(function (usr1, usr2) {
+                tmp1 = usr1.toLowerCase();
+                tmp2  = usr2.toLowerCase();
+                if (tmp2 > tmp1) {
+                    return -1;
+                }
+                if (tmp1 > tmp2) {
+                    return 1;
+                }
+                return 0;
+            });
+            
             var infobox = document.querySelector("#info-box");
             infobox.innerHTML = "<h3>Reservation List </h3>";
             var reservList = document.createElement("ol");
@@ -139,7 +139,7 @@ function reservList(){
 
         }
         else{
-            alert(server_res);
+            alert('No reservation info');
             console.log(`Error occured. Status : ${request.status}`)
         }
     }

@@ -107,7 +107,7 @@ app.get('/getReservationInfo/:userName', (req, res) => {    //Retrieve the reser
 app.get('/getReservationList', (req, res) => { // Get a list of reservation
     let db_data= load_JSON_file(db_file);
     const reserv_list = db_data.reservation;
-    if(Object.keys(reserv_list).length > 0) res.send(db_data.reservation);
+    if(Object.keys(reserv_list).length >= 0) res.send(db_data.reservation);
     else{
         res.status(404);
         res.send("No list available")
