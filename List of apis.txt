@@ -1,0 +1,8 @@
+List of apis
+- localhost:3000/addUser/:userName : add an user to the database
+- localhost:3000//getReservationInfo/:userName : get reservation info of a given user
+- localhost:3000/getReservationList : get the list of reservations 
+- localhost:3000/createReservation/:userName/date/:startDate/time/:startTime/hrs/:hours : create reservation of an user
+- localhost:3000/updateReservation/:userName/date/:startDate/time/:startTime/hrs/:hours : update reservation info of an user
+- localhost:3000/deleteReservation/:userName : delete reservation info of an user
+- localhost:3000/apiList : get the list of apis

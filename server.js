@@ -25,12 +25,12 @@ const port = 3000;
 const db_file = './skate.json'
 
 const json_placeholder = `{"user": [], "reservation" : {}}`
-const apiList = ['localhost:3000/addUser/USERNAME',
-                'localhost:3000/getReservationInfo/USERNAME',
-                'localhost:3000/getReservationList/',
-                'localhost:3000/createReservation/USERNAME',
-                'localhost:3000/updateReservation/USERNAME',
-                'localhost:3000/deleteReservation/USERNAME',
+const apiList = ['localhost:3000/addUser/:userName',
+                'localhost:3000//getReservationInfo/:userName',
+                'localhost:3000/getReservationList',
+                'localhost:3000/createReservation/:userName/date/:startDate/time/:startTime/hrs/:hours',
+                'localhost:3000/updateReservation/:userName/date/:startDate/time/:startTime/hrs/:hours',
+                'localhost:3000/deleteReservation/:userName',
                 'localhost:3000/apiList']
 
 
